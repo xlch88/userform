@@ -1,0 +1,268 @@
+body {
+    background: #f9f9f9;
+    height: 100%;
+}
+
+.moeq-navbar {
+    position: fixed;
+    top: 0px;
+    height: 40px;
+    width: 100%;
+    color: #fff;
+    background-image: linear-gradient(90deg,#b967ff,#ff9bbd);
+    z-index: 10000;
+}
+
+.moeq-navbar a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.moeq-navbar>.left {
+    float: left;
+}
+
+.moeq-navbar>.right {
+    float: right;
+}
+
+.moeq-navbar>.left>.item, .moeq-navbar>.left>a>.item {
+}
+
+.moeq-navbar>.right>.item, .moeq-navbar>.right>a>.item {
+}
+
+.moeq-navbar>.left>.item, .moeq-navbar>.left>a>.item,.moeq-navbar>.right>.item, .moeq-navbar>.right>a>.item {
+    padding: 0 10px;
+    height: 40px;
+    float: left;
+    line-height: 40px;
+    cursor: pointer;
+    transition: background .2s,color .2s;
+    position: relative;
+}
+
+.moeq-navbar>.left>.item:hover, .moeq-navbar>.left>a>.item:hover,.moeq-navbar>.right>.item:hover, .moeq-navbar>.right>a>.item:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: #FFEB3B;
+}
+
+.moeq-navbar>.left>.item:hover .more, .moeq-navbar>.left>a>.item:hover .more,.moeq-navbar>.right>.item:hover .more, .moeq-navbar>.right>a>.item:hover .more {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.moeq-navbar>.left>.item:hover a, .moeq-navbar>.left>a>.item:hover a,.moeq-navbar>.right>.item:hover a, .moeq-navbar>.right>a>.item:hover a {
+    color: #FFEB3B;
+}
+
+.moeq-navbar .img {
+    font-size: 0px;
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+}
+
+.moeq-navbar .img>img {
+    max-height: 30px;
+}
+
+.moeq-navbar span {
+    display: inline-block;
+}
+
+.moeq-navbar .icon {
+    display: inline-block;
+    color: #fff;
+}
+
+.moeq-navbar .icon>.iconfont {
+}
+
+.moeq-navbar .more {
+    opacity: 0;
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    background: #fff;
+    min-width: 100%;
+    color: #737373;
+    box-shadow: 0 6px 12px rgba(0,0,0,.176);
+    border-radius: 5px;
+    overflow: hidden;
+    pointer-events: none;
+    transition: opacity .2s;
+}
+
+.moeq-navbar .more a {
+    color: #2196F3!important;
+    word-break: keep-all;
+}
+
+.moeq-navbar .more>.item {
+    line-height: 17px;
+    font-size: 14px;
+    padding: 10px;
+    border-bottom: 1px solid #f1f1f1;
+    cursor: initial;
+    transition: background .2s;
+}
+
+.moeq-navbar .more>.item.hr {
+    padding: 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.moeq-navbar .more>.item.link {
+    padding: 0px;
+}
+
+.moeq-navbar .more>.item.link a {
+    padding: 10px;
+    display: block;
+}
+
+.moeq-navbar .more>.item:hover {
+    background: rgba(0,0,0,.02)
+}
+
+#main {
+    padding-left: 180px;
+    padding-top: 40px;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.moeq-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin-top: 40px;
+    width: 180px;
+    background: #fff;
+    height: calc(100% - 40px);
+    z-index: 9999;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .1);
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.moeq-sidebar>.item {
+    display: block;
+    transition: background .2s;
+    position: relative;
+    height: auto;
+}
+
+.moeq-sidebar>.item.open.more::before {
+}
+
+.moeq-sidebar>.item.more::before {
+    content: "\e729";
+    font-family: "iconfont" !important;
+    position: absolute;
+    right: 15px;
+    top: 9px;
+    transition: transform .3s;
+    transform: rotate(-90deg);
+    pointer-events: none;
+}
+
+.moeq-sidebar>.item.open::before {
+    transform: rotate(0deg);
+}
+
+.moeq-sidebar>.item:hover,.moeq-sidebar>.item.open {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.moeq-sidebar>.item:hover a,.moeq-sidebar>.item.open>a {
+    color: #03A9F4;
+}
+
+.moeq-sidebar>.item:hover>.more a {
+    color: #7b7b7b;
+}
+
+.moeq-sidebar>.item:hover>.more a:hover {
+    color: #03A9F4;
+}
+
+.moeq-sidebar>.item:hover .more,.moeq-sidebar>.item.active .more,.moeq-sidebar>.item.open .more {
+    background: rgba(90, 217, 255, 0.08);
+}
+
+.moeq-sidebar>.item.active .more,.moeq-sidebar>.item.open .more {
+    opacity: 1;
+    pointer-events: initial;
+    height: auto;
+}
+
+.moeq-sidebar>.item.title:hover {
+    background: initial;
+}
+
+.moeq-sidebar>.item.title p {
+    padding: 10px;
+    line-height: 20px;
+    display: block;
+    margin: 0;
+}
+
+.moeq-sidebar>.item a {
+    padding: 10px;
+    display: block;
+    color: #7b7b7b;
+    text-decoration: none;
+    line-height: 20px;
+}
+
+.moeq-sidebar>.item>.more {
+    padding-left: 10px;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity .3s;
+    height: 0px;
+}
+
+.moeq-sidebar>.item.active {
+    color: #fff;
+}
+
+.moeq-sidebar>.item.active>a {
+    background: #2196F3;
+    color: #fff;
+}
+
+.moeq-sidebar>.item.active:before {
+    content: ' ';
+    font-size: 0px;
+    position: absolute;
+    top: 10px;
+    right: -20px;
+    width: 0;
+    height: 0;
+    border: 20px dashed #f9f9f9;
+    border-top: 0;
+    color: #fff;
+    line-height: 0;
+    border-bottom-style: solid;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    transform: rotate(270deg);
+}
+
+.moeq-sidebar::-webkit-scrollbar {
+    width: 3px;
+}
+
+.moeq-sidebar::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: #b3edff;
+}
+
+.moeq-sidebar::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #ffffff;
+}

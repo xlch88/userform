@@ -1,0 +1,10 @@
+$(function(){
+	$('.moeq-sidebar>.more>a').click(function(){
+		if($(this).parent().hasClass('open')){
+			$(this).parent().removeClass('open')
+			return;
+		}
+		$('.moeq-sidebar>.item').removeClass('open');
+		$(this).parent().addClass('open');
+	});
+});
